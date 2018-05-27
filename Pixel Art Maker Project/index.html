@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="styles.css">
+   <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+    
+</head>
+<body>
+        
+    <!-- ======================ENTER VALUES TO SET GRID DIMENSIONS=================================== -->
+    <h1>Lab: Pixel Art Maker</h1>
+
+    <h2>Choose Grid Size</h2>
+    <form id="sizePicker">
+        Grid Height:
+        <input type="number" id="inputHeight" name="height" min="1" value="1">
+        Grid Width:
+        <input type="number" id="inputWidth" name="width" min="1" value="1">
+        <input type="button" id ="submit_form" value="submit" > 
+    </form>
+
+    <!-- ======================CHOOSE A COLOR FOR DRAWING OR TO SET THE BACKGROUND COLOR================ -->
+    <h2>Pick A Color</h2>
+    <input type="color" id="colorPicker">
+
+    <!-- ======================TABLE POSITION=================================== -->
+    
+    <h2>Design Canvas</h2>
+    <table id="pixelCanvas">
+        
+    </table>
+  <!--==========================================================-->
+  <script src="designs.js"></script>
+
+  <br/><br />
+  <p id="myP"></p>
+  <input type="button" id="display_text" value="set background color"></button>
+
+</body>
+</html>
