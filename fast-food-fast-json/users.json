@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "userID": "U1",
+      "username": "john",
+      "password": "ygritte",
+      "firstname": "John",
+      "lastname": "Snow"
+    },
+    {
+      "userID": "U2",
+      "username": "Young Wolf",
+      "password": "robstark",
+      "firstname": "Robert",
+      "lastname": "Stark"
+    },
+    {
+      "userID": "U3",
+      "username": "Theo",
+      "password": "theogreyjoy",
+      "firstname": "Theon",
+      "lastname": "Greyjoy"
+    },
+    {
+      "userID": "U4",
+      "username": "The Imp",
+      "password": "shay",
+      "firstname": "Tyrion",
+      "lastname": "Lannister"
+    },
+    {
+      "userID": "U5",
+      "username": "Dragon Queen",
+      "password": "freetheslaves",
+      "firstname": "Daenerys",
+      "lastname": "Targaryen"
+    },
+    {
+      "userID": "U6",
+      "username": "Mormont",
+      "password": "jorahM",
+      "firstname": "Jorah",
+      "lastname": "Mormont"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.title {
+  background-color: lightblue;
+}
+
+#gridDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  /* grid-auto-rows: minmax(200px, auto); */
+  max-width: 960px;
+  margin: auto;
+}
+
+#gridDiv_leftChild, #gridDiv_rightChild {
+  border: 1px solid silver;
+}
+
+#foodImg {
+  width: 400px;
+  height: 350px;
+}

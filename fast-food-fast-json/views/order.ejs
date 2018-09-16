@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/order.css' />
+  </head>
+  <body>
+
+    <% include templates/header.ejs %>
+
+    <h1 class="title"><%= title %></h1>
+
+    <form>
+    <!-- <img  src="/images/edikaikong-Nigerian-food.jpg" /> -->
+    <div id="gridDiv" >
+      <div id="gridDiv_leftChild">
+        <p><%= order.foodName %></p>
+        <img id="foodImg" src=<%=order.imagePath%> />
+        <p><%= order.foodDescription %><p>
+      </div>
+      <div id="gridDiv_rightChild">
+        <p><strong>Price: </strong>N<%= order.price %></p>
+        <p><strong>Quantity: </strong><%= order.quantity %></p>
+        <p><strong>Calorie level: </strong><%= order.calorie %></p>
+        <p><strong>Delivery date: </strong><%= order.date %></p>
+        <p><strong>User name: </strong><%= order.username%></p>
+      </div>
+    </div>
+  </form>
+
+  </body>
+</html>

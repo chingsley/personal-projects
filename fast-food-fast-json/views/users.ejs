@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <% include templates/header.ejs %>
+
+    <h1 class="title"><%= title %></h1>
+    <!-- <p>Welcome to <%= title %></p> -->
+    <!-- <p><%= users[0].password %></p> -->
+    <table>
+      <tr>
+        <th>userID</th>
+        <th>username</th>
+        <th>name</th>
+      </tr>
+
+      <!-- for each user, display the user details in a row-->
+      <% users.forEach( (user) => { %>
+      <tr>
+        <td><%= user.userID %></td>
+        <td><%= user.username %></td>
+        <td><%= `${user.firstname} ${user.lastname}` %></td>
+      </tr>
+
+      <% }); %>
+
+    </table>
+
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+
+  <% include templates/header.ejs %>
+
+  <h1 class="title"><%= title %></h1>
+
+  <table>
+    <caption>List of orders made by customers</caption>
+    <tr>
+      <th>Order ID</th>
+      <th>username</th>
+      <th>food ordered</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Date</th>
+      <th>Status</th>
+    </tr>
+
+    <%  orders.forEach(order => {
+      let username = '';
+         users.forEach(user => {
+            if (user.userID === order.userID) {
+              username = user.username;
+            }
+        }); %>
+      <tr>
+          <% let orderLink = "/orders/"+order.orderID+""; %>
+          <td>  <a href=<%=orderLink%>> <%= order.orderID %> </a>  </td>
+          <td><%= username %></td>
+          <td><%= order.foodName %></td>
+          <td><%= order.quantity %></td>
+          <td>N<%= order.price %></td>
+          <td><%= order.date %></td>
+          <td><%= order.status %></td>
+        </tr>
+
+    <%});%>
+  </table>
+</body>
+</html>
