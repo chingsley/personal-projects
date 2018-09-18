@@ -15,7 +15,8 @@
       <tr>
         <th>userID</th>
         <th>username</th>
-        <th>name</th>
+        <th>email</th>
+        <th>telephone</th>
       </tr>
 
       <!-- for each user, display the user details in a row-->
@@ -23,7 +24,8 @@
       <tr>
         <td><%= user.userID %></td>
         <td><%= user.username %></td>
-        <td><%= `${user.firstname} ${user.lastname}` %></td>
+        <td><%= user.email %></td>
+        <td><%= user.telephone %></td>
       </tr>
 
       <% }); %>

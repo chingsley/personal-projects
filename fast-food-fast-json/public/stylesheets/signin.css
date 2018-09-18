@@ -1,0 +1,98 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/images/signin_bg_img.PNG);
+  /* background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(https://www.zastavki.com/pictures/1600x1200/2009/Food_Meat_and_barbecue_The_most_delicious_dish_012291_.jpg); */
+  /* height: 100vh; */
+  /* background-size: cover; */
+  background-position: center;
+  overflow-y: hidden;
+}
+
+.login-page{
+  width: 400px;
+  /* height: 350px; */
+  padding: 2px;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+
+#error{
+  color: red;
+}
+
+.form{
+  position: relative;
+  z-index: 1;
+  /* background: rgba(22, 177, 181, 0.8); */
+  background: rgba(13, 19, 1, 0.6);
+  /* background: transparent; */
+  max-width: 360px;
+  height: 400px;
+  margin: auto;
+  padding: 45px;
+  text-align: center;
+}
+
+.form input {
+  font-family: sans-serif, courier;
+  outline: 1;
+  /* background: #f2f2f2; */
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  background: transparent;
+  /* background: rgba(255, 255, 255, 0.2); */
+  width: 100%;
+  /* border: 1px solid white; */
+  border-bottom: 1px solid #63944C;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: white;
+
+}
+
+
+.form button {
+  font-family: sans-serif, courier;
+  text-transform: uppercase;
+  /* outline: 0; */
+  /* background: #7E5801; */
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  margin-top: 50px;
+  background: #63944C;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.form button:hover, .form button:active{
+  background: #A1B244;
+}
+
+.message{
+  color: #A1B24C;
+  /* margin: 15px 0 0; */
+  font-size: 12px;
+  margin-top: 150px;
+}
+
+.message a {
+  color: yellow;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.message a:hover {
+  /* font-size: 16px; */
+  text-decoration: underline;
+}

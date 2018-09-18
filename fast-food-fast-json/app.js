@@ -7,13 +7,18 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var menuRouter = require('./routes/menu');
-var orderRouter = require('./routes/order');
+// var orderRouter = require('./routes/order');
 var orderHistoryRouter = require('./routes/orderHistory');
 var manageOrdersRouter = require('./routes/manageOrders');
-var signinRouter = require('./routes/signin');
+// var signinRouter = require('./routes/signin');
 var signupRouter = require('./routes/signup');
 
 var app = express();
+
+//DECLARING PROJECT-WIDE VARIABLES
+// global.isRegisteredUser = false; // Declaring project-wide variable is not advisable
+/*NOTE: app.locals.variable makes variable accessible from the views but
+global.variable makes variable accessible project-wide*/;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,12 +32,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// app.use('/users', usersRouter);
 app.use('/menu', menuRouter);
-app.use('/order', orderRouter);
+// app.use('/order', orderRouter);
 app.use('/orderHistory', orderHistoryRouter);
 app.use('/manageOrders', manageOrdersRouter);
-app.use('/signin', signinRouter);
+// app.use('/signin', signinRouter);
 app.use('/signup', signupRouter);
 
 // catch 404 and forward to error handler
