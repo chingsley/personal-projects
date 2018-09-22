@@ -1,0 +1,167 @@
+{
+  "orders": [
+    {
+      "orderID": "R001",
+      "userID": "U006",
+      "username": "jorah",
+      "status": "complete",
+      "foodName": "Yam-fish pottage",
+      "itemID": "F001",
+      "quantity": 1,
+      "price": 250,
+      "date": "02-10-2018"
+    },
+    {
+      "orderID": "R002",
+      "userID": "U005",
+      "username": "queen",
+      "status": "pending",
+      "foodName": "Fufu and Vegetable soup",
+      "itemID": "F002",
+      "quantity": 2,
+      "price": 500,
+      "date": "03-10-2018"
+    },
+    {
+      "orderID": "R003",
+      "userID": "U004",
+      "username": "tyrion",
+      "status": "declined",
+      "foodName": "Jollof Rice",
+      "itemID": "F003",
+      "quantity": 1,
+      "price": 400,
+      "date": "10-10-2018"
+    },
+    {
+      "orderID": "R004",
+      "userID": "U003",
+      "username": "theon",
+      "status": "complete",
+      "foodName": "coco yam pottage (Ekpang Nkukwo)",
+      "itemID": "F004",
+      "quantity": 3,
+      "price": 600,
+      "date": "02-10-2018"
+    },
+    {
+      "orderID": "R005",
+      "userID": "U002",
+      "username": "rob",
+      "status": "pending",
+      "foodName": "Nkwobi",
+      "itemID": "F005",
+      "quantity": 1,
+      "price": 400,
+      "date": "24-10-2018"
+    },
+    {
+      "orderID": "R006",
+      "userID": "U001",
+      "username": "john",
+      "status": "declined",
+      "foodName": "beans porridge",
+      "itemID": "F006",
+      "quantity": 1,
+      "price": 250,
+      "date": "02-10-2018"
+    },
+    {
+      "orderID": "R007",
+      "userID": "U006",
+      "username": "jorah",
+      "status": "complete",
+      "foodName": "White Soup",
+      "itemID": "F007",
+      "quantity": 4,
+      "price": 2000,
+      "date": "02-11-2018"
+    },
+    {
+      "orderID": "R008",
+      "userID": "U005",
+      "username": "queen",
+      "status": "pending",
+      "foodName": "Banga Stew",
+      "itemID": "F008",
+      "quantity": 1,
+      "price": 800,
+      "date": "12-10-2018"
+    },
+    {
+      "orderID": "R009",
+      "userID": "U004",
+      "username": "tyrion",
+      "status": "pending",
+      "foodName": "Ogbono Soup",
+      "itemID": "F009",
+      "quantity": 2,
+      "price": 600,
+      "date": "15-11-2018"
+    },
+    {
+      "orderID": "R010",
+      "userID": "U003",
+      "username": "theon",
+      "status": "pending",
+      "foodName": "Pepper soup",
+      "itemID": "F010",
+      "quantity": 5,
+      "price": 1500,
+      "date": "02-12-2018"
+    },
+    {
+      "orderID": "R011",
+      "userID": "U002",
+      "username": "rob",
+      "status": "declined",
+      "foodName": "BANGA SOUP",
+      "itemID": "F011",
+      "quantity": 5,
+      "price": 2000,
+      "date": "5-11-2018"
+    },
+    {
+      "orderID": "R012",
+      "userID": "U001",
+      "username": "john",
+      "status": "complete",
+      "foodName": "Edikang Ikong",
+      "itemID": "F012",
+      "quantity": 2,
+      "price": 2000,
+      "date": "07-10-2018"
+    },
+    {
+      "orderID": "R013",
+      "userID": "U006",
+      "username": "jorah",
+      "status": "pending",
+      "foodName": "Afang Soup",
+      "itemID": "F013",
+      "quantity": 5,
+      "price": 2500,
+      "date": "10-10-2018"
+    },
+    {
+      "orderID": "R014",
+      "foodName": "Edikang Ikong",
+      "itemID": "F012",
+      "quantity": 2,
+      "price": 4000,
+      "username": "john",
+      "date": "07-10-2018",
+      "status": "pending"
+    },
+    {
+      "orderID": "R015",
+      "foodName": "Edikang Ikong",
+      "itemID": "F012",
+      "quantity": 2,
+      "price": 4000,
+      "username": "chingsley",
+      "date": "07-10-2018",
+      "status": "pending"
+    }
+  ]
+}

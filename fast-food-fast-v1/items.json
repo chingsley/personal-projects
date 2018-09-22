@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "itemID": "F001",
+      "foodName": "Yam-fish pottage",
+      "calorie": 5,
+      "unitPrice": 250,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/Nigerian-food-ikokore.jpg",
+      "imagePath": "/images/Nigerian-food-ikokore.jpg",
+      "foodDescription": "The yam-fish pottage is prepared using grated water yam and other ingredients like assorted meats, smoked fish, palm oil, pepper, etc."
+    },
+    {
+      "itemID": "F002",
+      "foodName": "Fufu and Vegetable Soup",
+      "calorie": "7.5",
+      "unitPrice": "2000",
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/tuwo-shinkafa.jpg",
+      "imagePath": "/images/tuwo-shinkafa-1.jpg",
+      "foodDescription": "The nigerian fufu is common with all Nigerian tribes. Its made from cassava. It can be used to eat any Nigerian soup"
+    },
+    {
+      "itemID": "F003",
+      "foodName": "Jollof Rice",
+      "calorie": 6,
+      "unitPrice": 400,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/nigerian-fried-rice-696x522.jpg",
+      "imagePath": "/images/nigerian-fried-rice-696x522-1.jpg",
+      "foodDescription": "Jollof Rice has a stronghold on Nigerians, hence its popularity. Ours is prepared to apease even the most jaded palate"
+    },
+    {
+      "itemID": "F004",
+      "foodName": "coco yam pottage (Ekpang Nkukwo)",
+      "calorie": 5,
+      "unitPrice": 600,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/Ekpang-Nkukwo-Cocoyam-Porridge.jpg",
+      "imagePath": "/images/Ekpang-Nkukwo-Cocoyam-Porridge.jpg",
+      "foodDescription": "This popular Nigerian food is a pottage prepared by wrapping grated “coco yam” or “coco yam and water yam” in coco yam leaves and cooked"
+    },
+    {
+      "itemID": "F005",
+      "foodName": "Nkwobi",
+      "calorie": 3,
+      "unitPrice": 400,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/nkwobi1.jpg",
+      "imagePath": "/images/nkwobi1.jpg",
+      "foodDescription": "You can call it “Igbo asun” as it contains mainly meat (cow legs) cooked in spicy sauce and vegetable. It is a dessert like no other."
+    },
+    {
+      "itemID": "F006",
+      "foodName": "beans porridge",
+      "calorie": 6,
+      "unitPrice": 250,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/Nigerian-food-ewa-aganyin-696x522.jpg",
+      "imagePath": "/images/Nigerian-food-ewa-aganyin-696x522.jpg",
+      "foodDescription": "a palatable mixture of beans fish-stew and vetable. Yam can be added optionally to make bean-yam porridge."
+    },
+    {
+      "itemID": "F007",
+      "foodName": "White Soup",
+      "calorie": 4,
+      "unitPrice": 2000,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/white-soup-ofe-nsala-with-intestine-4-litres-696x464.jpg",
+      "imagePath": "/images/white-soup-ofe-nsala-with-intestine-4-litres-696x464.jpg",
+      "foodDescription": "The ingredients include Uyayak pod, chicken (or goat meat), ehu seeds (local nutmeg), dry pepper, achi, etc. Yam and other recipes are used as thickener but do not use Palm oil"
+    },
+    {
+      "itemID": "F008",
+      "foodName": "Banga Stew",
+      "calorie": 4,
+      "unitPrice": 800,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/ng-ofe-akwu.jpg",
+      "imagePath": "/images/ng-ofe-akwu.jpg",
+      "foodDescription": "The recipe of this food include, definitely, Palm fruit as the main ingredient, and other ingredients like ogiri, crayfish, onions (optional). It can be used to eat boiled rice, etc"
+    },
+    {
+      "itemID": "F009",
+      "foodName": "Ogbono Soup",
+      "calorie": 4,
+      "unitPrice": 600,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/ogbono-nigerian-soup.jpg",
+      "imagePath": "/images/ogbono-nigerian-soup.jpg",
+      "foodDescription": "OGBONO is a draw soup with preparation varying depending on preferences. It includes vegetables like ugwu (pumpkin leaves) or bitter leaf or both. Okra is included (optionally) at times. It is mostly consumed with swallows like fufu, amala, Eba, etc"
+    },
+    {
+      "itemID": "F010",
+      "foodName": "Pepper soup",
+      "calorie": 5,
+      "unitPrice": 1500,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/Nigerian-food-pepper-soup.jpeg",
+      "imagePath": "/images/Nigerian-food-pepper-soup.jpg",
+      "foodDescription": "Pepper soup has its versions of chicken, beef, catfish, goat meat. Some add yam to it or plantain. You would want to take pepper soup with a chilled drink "
+    },
+    {
+      "itemID": "F011",
+      "foodName": "BANGA SOUP",
+      "calorie": 3,
+      "unitPrice": 2000,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/banga-soup.jpeg",
+      "imagePath": "/images/banga-soup.jpg",
+      "foodDescription": "The soup is prepared using the oil extracted from the Palm fruit, vegetables, beef, etc. The Palm fruit oil used is quite different from the Palm oil. It is  mainly consumed with swallows, especially Usi (starch) and Eba."
+    },
+    {
+      "itemID": "F012",
+      "foodName": "Edikang Ikong",
+      "calorie": 5,
+      "unitPrice": 2000,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/edikaikong-Nigerian-food.jpg",
+      "imagePath": "/images/edikaikong-Nigerian-food.jpg",
+      "foodDescription": "This vegetable soup, popular among the people of Akwa-Ibom and Cross River especially the Efik-Ibibios, is packed with nutrient, and common ingredient you’ll find in this soup is Perewinkles"
+    },
+    {
+      "itemID": "F013",
+      "foodName": "Afang Soup",
+      "calorie": 5,
+      "unitPrice": 2500,
+      "imageURL": "https://www.oasdom.com/wp-content/uploads/2017/08/afang-soup-meat.jpg",
+      "imagePath": "/images/afang-soup-meat.jpg",
+      "foodDescription": "This is another nutrient packed vegetable food in Nigeria. Afang soup is prepared with the combination of AFANG leaves (ukazi / okazi leaves, as it is popularly called) and water leaf. Spinach can be used as substitute. Other ingredients like crayfish, meat, etc are added too."
+    },
+    {
+      "itemID": "F014",
+      "foodName": "Rice and Stew",
+      "calorie": "6",
+      "unitPrice": "1500",
+      "imageURL": null,
+      "imagePath": null,
+      "foodDescription": null
+    }
+  ]
+}

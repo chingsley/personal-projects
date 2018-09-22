@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "userID": "U001",
+      "username": "john",
+      "password": "johnsnow",
+      "telephone": "08062550695",
+      "email": "johnsnow@gmail.com",
+      "firstname": "John",
+      "lastname": "Snow"
+    },
+    {
+      "userID": "U002",
+      "username": "rob",
+      "password": "robstark",
+      "telephone": "08062550695",
+      "email": "robstark@gmail.com",
+      "firstname": "Robert",
+      "lastname": "Stark"
+    },
+    {
+      "userID": "U003",
+      "username": "theon",
+      "password": "greyjoy",
+      "telephone": "08062550695",
+      "email": "theongreyjoy@gmail.com",
+      "firstname": "Theon",
+      "lastname": "Greyjoy"
+    },
+    {
+      "userID": "U004",
+      "username": "tyrion",
+      "password": "lannister",
+      "telephone": "08062550695",
+      "email": "tyrionlannister@gmail.com",
+      "firstname": "Tyrion",
+      "lastname": "Lannister"
+    },
+    {
+      "userID": "U005",
+      "username": "queen",
+      "password": "freetheslaves",
+      "telephone": "08062550695",
+      "email": "queen@gmail.com",
+      "firstname": "Daenerys",
+      "lastname": "Targaryen"
+    },
+    {
+      "userID": "U006",
+      "username": "jorah",
+      "password": "mormont",
+      "telephone": "08062550695",
+      "email": "jorahmormont@gmail.com",
+      "firstname": "Jorah",
+      "lastname": "Mormont"
+    },
+    {
+      "userID": "U007",
+      "username": "eneja",
+      "password": "chinonxo",
+      "telephone": "0806355555",
+      "email": "eneja.kc@gmail.com"
+    },
+    {
+      "userID": "U009",
+      "username": "chinonso",
+      "password": "chinonxo*059",
+      "telephone": "0806 3550 695",
+      "email": "eneja.kc@gmail.com"
+    },
+    {
+      "userID": "U010",
+      "username": "enejakc",
+      "password": "chinonxo",
+      "telephone": "0806 3550 695",
+      "email": "eneja.kc@gmail.com"
+    },
+    {
+      "userID": "U011",
+      "username": "chingsley",
+      "password": "chinonxo",
+      "telephone": "0806 3550 695",
+      "email": "eneja.kc@gmail.com"
+    },
+    {
+      "userID": "U012",
+      "username": "Amanda",
+      "password": "jonathan",
+      "telephone": "+234802350811",
+      "email": "amandajonathan@gmail.com"
+    }
+  ]
+}

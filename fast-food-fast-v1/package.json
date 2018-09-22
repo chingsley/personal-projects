@@ -1,0 +1,25 @@
+{
+  "name": "rest-shop",
+  "version": "1.0.0",
+  "description": "A Node.js RESTful API Tutorial Project (Build a simple shop API)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint *.js"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "Eneja Kingsley",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-p5js": "^1.0.1"
+  }
+}
