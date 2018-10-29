@@ -1,0 +1,79 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-section {
+    color: red;
+    background-color: lightblue;
+    padding: 20px;
+    /* background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),  url('../images/food7.jpg') no-repeat; */
+}
+
+div.input-container {
+    /* border: 1px solid black; */
+    padding: 5px;
+    width: 52%;
+    /* position: relative; */
+    margin: 0px auto;
+    margin-top: 5%;
+}
+
+.txtBox {
+    position: relative;
+    font-size: 20px;
+    font-weight: 300px;
+    color: black;
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
+    padding-left: 10px;
+    height: 60px;
+    width: 400px;
+    /* border: 2px solid #efa424; */
+    box-shadow: 0px 6px #efa424;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    /* display: block; */
+    position: relative;
+    background-color: #fcad26;
+    font-size: 16px;
+    font-weight: 300px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 25px 80px;
+    /* margin: 0 auto; */
+    /* border-radius: 20px; */
+    box-shadow: 0px 6px #efa424; /*first value is x offset, 2nd value is y offset*/
+}
+
+.btn:hover {
+    box-shadow: 0 4px #efa424;
+    top: 2px;
+}
+
+.btn:active {
+    box-shadow: none;
+    top: 6px;
+}
+
+div.result-area {
+    padding: 20px;
+    min-height: 150px;
+    width: 48%;
+    margin: 0 auto;
+    margin-top: 30px;
+    word-wrap: break-word;
+    border: 1px solid silver;
+    box-shadow: 6px 6px silver;
+}
+
+ul {
+    font-size: 16px;
+    color: green;
+}
+
