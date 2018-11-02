@@ -192,6 +192,12 @@ const verifyEmail = (str) => {
     }
   }
   
+  // Return false if there is no dot in the domain (there must be a .*)
+  if (dom.indexOf('.') < 0) {
+    msg = `email: invalid domain name. Use .com, .org, or .net`;
+    return { error: true, message: msg };
+  }
+
   // If an email passes all the tests above, then return this:
   return {error: false, message: 'email is valid'};
 };
