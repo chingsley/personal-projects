@@ -1,0 +1,206 @@
+/*---------------- COLORS --------------------*/
+/*
+    header-bg-color: #35424a;
+    reddish-color: #e8491d;
+    fav-color: #fafad2;
+*/
+/*---------------- ANIMATIONS ----------------*/
+    @keyframes moveInLeft {
+        0% {opacity: 0; transform: translate(-100px);}
+        80% {transform: translate(10px);}
+        100% {opacity: 1; transform: translate(0);}
+    }
+    
+    @keyframes moveInRight {
+        0% {opacity: 0; transform: translate(100px);}
+        80% {transform: translate(-10px);}
+        100% {opacity: 1; transform: translate(0);}
+    }
+    
+    @keyframes moveInFromBelow {
+        0% {opacity: 0; transform: translateY(30px);}
+        100% {opacity: 1; transform: translate(0);}
+    }
+/*-------------------------------------------*/
+
+
+/*--------------- GLOBALS -------------------*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* .current {
+    color: #e8491d !important;
+} */
+/*------------------------------------------*/
+
+
+#header-flex-box {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: space-between; */
+    /* margin-bottom: 20px; */
+    /* flex-direction: column; */
+}
+
+.div-ireporter {
+    border: 2px solid black;
+    color: #e8491d;
+    padding: 0 5px 0 5px;
+    height: 50px;
+
+}
+
+.div-ireporter .special-coloring {
+    color: #fafad2;
+    font-style: italic;
+    font-family: monospace;
+    font-weight: 1000;
+}
+nav {
+    /* border: 1px solid black; */
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
+.nav-ul {
+    /* border: 1px solid black; */
+}
+
+.nav-ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.li-outer {
+    /* border: 1px solid black; */
+    float: left;
+    /* width: 150px; */
+    width: 120px; /*Set this to 150*/
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.links {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    /* color: orange; */
+    position: relative; /*enables z-index to work*/
+    z-index: 10;
+    /* border: 1px solid black; */
+}
+
+.links:hover {
+    /* background-color: grey; */
+}
+
+.li-inner {
+    display: none;
+    text-align: center;
+}
+
+.li-outer:hover .li-inner {
+    display: block;
+}
+
+
+
+    .li-outer, .li-inner {
+        position: relative;
+        background-color: #35424a;
+        border: 1px solid transparent;
+    }
+    .li-outer::before, .li-inner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: #e8491d;
+        transform: scaleY(0);
+        transition: transform .2s,
+                    width .4s cubic-bezier(1,0,0,1) .2s;
+    }
+    .li-outer:hover::before, 
+    .li-inner:hover::before,
+    .current::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    header {
+            background-image: linear-gradient(to right bottom, #35424a, rgba(53, 66, 74, 1));
+            color: #fafad2;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+    }
+
+
+
+    .main-section-div {
+    background-image: linear-gradient(to right bottom,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.8)),
+        url(../img/nat-7.jpg);
+    min-height: 400px;  
+    background-size: cover;  
+    /* background-position: center; */
+    text-align: center;
+    /* position: relative; */
+}
+
+.mission-statement-big {
+    font-size: 55px;
+    margin-bottom: 15px;
+    animation: moveInLeft 1s ease-out;
+    background-image: linear-gradient(to left, #ffffff, yellow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent
+}
+
+.mission-statement-small {
+    font-size: 16px;
+    color: lightgoldenrodyellow;
+    animation: moveInFromBelow .5s ease-out .75s;
+    animation-fill-mode: backwards
+}
+
+.mission-statement {
+    padding: 24px 0 24px 0;
+    /* width: 100%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    width: 79%;
+    /* border: 1px solid white; */
+    margin: 0 auto;
+    /* margin-top: 20%; */
+}
+
+.mission-statement h1 {
+    margin-top: 10%;
+}
