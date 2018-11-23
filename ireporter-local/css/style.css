@@ -62,6 +62,25 @@ ul {
 .u-margin-top-medium {margin-top: 4rem !important}
 .u-margin-top-big { margin-top: 8rem !important; }
 .u-margin-top-huge { margin-top: 10rem !important; }
+.active-link { color: #e8491d !important; }
+.logo {
+    font-family: Arial, Helvetica, sans-serif;
+    /* border: 1px solid black; */
+    color: #e8491d;
+    padding: 0 5px 0 5px;
+    height: 50px;
+    cursor: pointer;}
+    .logo .special-coloring {
+        color: #fafad2;
+        font-style: italic;
+        font-family: monospace;
+        font-weight: 1000;}
+    .repa {
+        color: #e8491d;}
+    .logo a {
+        text-decoration: none;}
+    .logo-footer-version {
+        transform: scale(2);}
 
 .heading-secondary {
     font-size: 2.7rem;
@@ -79,7 +98,24 @@ ul {
     .heading-secondary:hover {
         /* transform: skewY(2deg) skewX(15deg) scale(1.1); */
         transform: scale(1.1);
-        text-shadow: .5rem 1rem 2rem rgba(53, 66, 74, 1);}
+        text-shadow: .5rem 1rem 2rem rgba(250, 250, 210, 1);}
+
+.heading-secondary-dark {
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+   background-image: linear-gradient(to right, #35424a, rgb(1, 50, 67));
+   transform: scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba(53, 66, 74, 1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+    transition: all .2s;}
+    /* .heading-secondary-dark:hover {
+        transform: scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba(53, 66, 74, 1);} */
 
 .heading-tertiary {
     background-image: linear-gradient(to right, #eeeeee, gold);
@@ -100,6 +136,7 @@ ul {
 /* The custom link button*/
 .link {
     padding: 10px 2px 10px 2px;
+    font-family: "Lucida Grande" !important;
     font-size: 1.5rem;
     text-decoration: none;
     display: block;
@@ -128,11 +165,14 @@ ul {
     transition: transform .2s,
                 width .4s cubic-bezier(1,0,0,1) .2s,
                 background-color .6s;}
-.link-container:hover::before,
-.current::before {
+.link-container:hover::before {
     transform: scaleY(1);
     width: 100%;}
-
+#link-on-white-bg {
+    color: #013243;
+    transition: all 1s;}
+#link-on-white-bg:hover {
+    color: #ffffff;}
 
 /*------------------------------------------*/
 
@@ -146,31 +186,20 @@ header {
         display: flex;
         justify-content: space-around;
         /* flex-direction: column; */}
-    .div-ireporter {
-        font-family: Arial, Helvetica, sans-serif;
-        /* border: 2px solid black; */
-        color: #e8491d;
-        padding: 0 5px 0 5px;
-        height: 50px;
-        cursor: pointer;}
-    .div-ireporter .special-coloring {
-        color: #fafad2;
-        font-style: italic;
-        font-family: monospace;
-        font-weight: 1000;}
     nav {
         padding: 2px;
         margin-bottom: 10px;}
-        .nav-ul::after {
+        .nav-ul::after { /*used to restore ul height after floating it to the right*/
             content: "";
             display: table;
             clear: both;}
         .li-outer {
             float: left;
-            width: 120px; /*Set this to 150*/
+            width: 150px; /*Set this to 150*/
             height: 40px;
             line-height: 40px;
             text-align: center;
+            text-transform: uppercase;
             font-size: 16px;}
         .links {
             /* text-transform: uppercase; */
@@ -190,7 +219,7 @@ header {
             position: relative;
             background-color: #35424a;
             border: 1px solid transparent;}
-            .a-li-outer::before,
+            .animated-link::before,
             .a-li-inner::before {
                 content: "";
                 position: absolute;
@@ -205,9 +234,8 @@ header {
                 transition: transform .2s,
                             width .4s cubic-bezier(1,0,0,1) .2s,
                             background-color .6s;}
-            .a-li-outer:hover::before, 
-            .a-li-inner:hover::before,
-            .current::before {
+            .animated-link:hover::before, 
+            .a-li-inner:hover::before {
                 transform: scaleY(1);
                 width: 100%;}
             .li-outer:active::before,
@@ -268,19 +296,84 @@ header {
         animation-fill-mode: backwards}
 
 
-.mini-main-section{
+.section-newsletter {
+    padding: 2rem 0 0 0;
     color: #fafad2;
-    background: #35424a;
-    border-bottom: 2px solid #e8491d;}
-    .mini-main-section .row {
-        height: 6rem;}
+    background: #35424a;}
+    .section-newsletter .container {
+        margin-top: 1rem;
+        width: 80%;
+        margin: 0 auto;
+        height: 5rem;
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */ /* Will center the items vertically betwween the top and the bottom*/
+        padding: 0 2rem;}
+    .section-newsletter .container h1 { 
+        /* border: 1px solid white; */}
+    .section-newsletter .container form { 
+        display: flex;
+        justify-content: flex-end;
+        width: 45%;
+        padding-left: 0;}
+        .input-and-label {
+            width: 100%;
+            display: flex;
+            flex-direction: column;}
+        .input-class {
+            /* align-self: flex-end; */
+            border: 1px solid white;
+            display: block;
+            font-size: 15px;
+            font-family: inherit;
+            border-radius: 2px;
+            background-color: rgba(255, 255, 255, 1);
+            border: none;
+            border-bottom: 3px solid transparent;
+            width: 100%;
+            padding: 4px;
+            height: 38px;
+            transition: all .5s;}
+        .input-class:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #55c57a;}
+        .input-class:focus:invalid {
+            border-bottom: 3px solid #e8491d;}
+        .section-newsletter .container form label {
+            display: block;
+            padding: 10px 0 0 0;
+            transition: all .5s;}
+        .input-class:placeholder-shown + .label-class { /*These operations ':placeholder-shown' and '+' does not work when you use tag selectors instead of class names.*/
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);  /* With the labe below the input box, this will move upwards */
+            /*transform: translateY(4rem); */ /*With the label above the input box, this will move it downwards*/}
+        .btn {
+            height: 38px;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: rgb(232, 73, 29);
+            border: 0;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: #ffffff;
+            border-radius: 2px;}
+
+
+
 
 
 .section-about {
-    /* border: 1px solid black; */
-    /* background-color: #f7f7f7; */
-    /* background-color: eeeeee; */
-    background-color: #6c7a89;
+    /* background-image: linear-gradient(to right bottom, #6c7a89, black); */
+    color: rgb(250, 250, 210);
+    background-image: linear-gradient(
+                        90deg,
+                    rgba(250, 250, 210, 1) 0%,
+                    rgba(255, 255, 255, 0.9), 100%, 
+                    transparent 50%
+                    ), 
+                    url(../img/nat-6.jpg);
     padding: 3px;
     padding-bottom: 15rem;
     display: block;}
@@ -295,9 +388,10 @@ header {
                 margin-bottom: 2rem;
                 border-left: 1px solid #e8491d;
                 box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+                letter-spacing: 1px;
                 padding: 20px;
                 border-radius: 5px;
-                background-image: linear-gradient(to right bottom, rgba(53, 66, 74, .6), rgb(53, 66, 74));
+                background-image: linear-gradient(to right bottom, rgba(53, 66, 74, 1), rgba(53, 66, 74, 1));
                 color: lightgoldenrodyellow;}
                 .img-gallery {
                     position: relative;}
@@ -317,7 +411,8 @@ header {
                 .img-in-gallery-3:hover {
                     outline: 1rem solid #35424a;
                     transform: scale(1) translateY(-.5rem);
-                    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, .5);
+                    /* box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, .5); */
+                    box-shadow: 0 2.5rem 4rem rgba(250, 250, 218, .5);
                     z-index: 20;}
                 .img-gallery:hover .img-in-gallery:not(:hover) {
                         transform: scale(.95);}
@@ -332,13 +427,12 @@ header {
     rgba(20, 23, 26, 0.8)), 
     url(../img/nat-4.jpg);
     background-size: cover;
-    transform: skewY(-7deg);
+    /* transform: skewY(-7deg); */
     margin-top: -10rem;}
     /* but do not skew the direct child/children (the div class row) of this section */
     .section-incidence > * {
-        transform: skewY(7deg);}
+        /* transform: skewY(-7deg); */}
     .flex-box-card {
-        /* border:1px solid white; */
         display: flex;
         /* justify-content: space-between; */
         justify-content: space-around;
@@ -384,11 +478,7 @@ header {
         top: 0rem;
         right: 0rem;
         transform: translate(-2%, 131%);
-        width: 100%;
-        /* top: 8rem;
-        right: 0rem;
-        width: 75%; */
-    }
+        width: 100%;}
     .card-heading-span {
         padding: .5rem .5rem;
         -webkit-box-decoration-break: clone;
@@ -420,10 +510,195 @@ header {
         box-shadow: 0 1.5rem 4rem rgb(250, 250, 210, .4);
         /* box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .4); */}
 
-
+/*There is no story yet. So this 'section' is used to patch the clippy part of section-incidence, befor the section footer*/
 .section-stories {
     display: block;}
     .section-stories .row {
         height: 28.5vh;
         margin-top: -5rem;
-        background-color: #6c7a89;}
+        /* background-color: #6c7a89; */
+          background-image: linear-gradient(
+                        90deg,
+                    rgba(255, 255, 255, 0.9) 0%,
+                    rgba(255, 255, 255, 0.9), 100%, 
+                    transparent 50%
+                    ), 
+                    url(../img/nat-6.jpg);}
+
+
+.footer {
+    /* background-color: #24252a; */
+    background-color: #013243;
+    padding: 6rem 0;
+    font-size: 1rem;
+    color: #eeeeee;}
+    .footer-logo-box {
+        text-align: center;
+        margin-bottom: 5rem;}
+    .flex-box-footer {
+        display: flex;
+        justify-content: space-around;}
+    .footer-navigation{
+        border-top: 1px solid #6c7a89;
+        padding-top: 1rem;
+        display: inline-block;}
+    .footer-ul {
+        /* border: 1px solid white; */
+        display: flex;}
+    .footer-ul-li {
+       /*Nothing here for now*/ }
+    .footer-ul-li:not(:last-child) {
+        margin-right: 1.5rem;}
+    .footer-link:link, 
+    .footer-link:visited {
+        color: #eeeeee;
+        background-color: transparent;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        transition: all .2s;}
+    .footer-link:hover {
+        color: orangered;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .4);
+        transform: scale(1.05);}
+    .footer-copyright {
+        border-top: 1px solid #6c7a89;
+        padding-top: 1rem;}
+   
+
+/******************** SIGN-UP PAGE **************/
+    .registration-div {
+        background-image: linear-gradient(
+                        90deg,
+                    rgba(250, 250, 210, 1) 0%,
+                    rgba(255, 255, 255, 0.9), 100%, 
+                    transparent 50%
+                    ), 
+                    url(../img/nat-10.jpg);
+        background-size: cover;
+        /* background-size: 100%; */ /* This is a poor alternative to background-size: cover*/
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+        height: 60rem;
+        padding: 2rem 0 0 0;}
+    .registration-div-2{
+        display: flex;
+        justify-content: center;}
+    .form {
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 1);
+        margin: 0 auto;
+        /* margin-top: 2rem; */
+        margin-bottom: 8rem;
+        border: 3px solid rgb(53, 66, 74);
+        border-radius: 10px;
+        opacity: .9;
+        width: 60%;}
+    .test-form{
+        box-shadow: 0 1.5rem 4rem rgb(250, 250, 210, .4);
+        margin: 0 auto;
+        margin-top: 2rem;
+        margin-bottom: 8rem;
+        background-image: linear-gradient(
+        to right bottom, 
+        rgba(53, 66, 74, 1), 
+        rgba(53, 66, 74, 1));
+        border: 3px solid rgb(53, 66, 74);
+        border-radius: 10px;
+        opacity: 0.5;
+        width: 60%;}
+    .form-group {
+        width: 70%;
+        margin: 0 auto;
+        padding: 2px;}
+    .form-group:not(:last-child) {
+        margin-bottom: 1rem;}
+    #form-group-last-child {
+        /* margin-bottom: 0px; */}
+    .form-group-title{
+        text-align: center;}
+     #form-register-title {
+        margin-top: 40px;
+        background-image: linear-gradient(to right, #35424a, rgb(1, 50, 67));
+         -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;} 
+    .form-input {
+        font-size: 1.2rem;
+        font-family: inherit;
+        color: black;
+        padding: .5rem 1rem;
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 1);
+        border-bottom: 1px solid #e8491d;
+        width: 100%;
+        display: block;
+        transition: all .5s;}
+    .form-input:focus {
+        outline: none;
+         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .4) !important;
+        border-bottom: 3px solid lightgreen;}
+    .form-input:focus:invalid {
+        border-bottom: 3px solid #e8491d;}
+    .form-input::-webkit-input-placeholder {
+        color: #6c7a89;}
+    .form-label {
+        color: #6c7a89;
+        font-size: 1.2rem;
+        margin-left:1.3rem;
+        margin-top: .5rem;
+        display: block;
+        transition: all .5s;}
+    .form-input:placeholder-shown + .form-label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-2.5rem);}
+    .form-div-btn {
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+        padding: 2px;
+        margin-bottom: 20px; }
+    #btn-register {
+        background-image: red;
+        height: 3rem;
+        font-size: 1.5rem;
+        padding: 10px;
+        width: 50%;}
+/*************************************************/
+
+/*********************** LOGIN PAGE **************/
+.section-login {
+    padding: 0 0;
+     background-image: linear-gradient(to right bottom, #6c7a89, black);}
+.book {
+    background-image: linear-gradient(
+                        105deg,
+                    rgba(255, 255, 255, 0.9) 0%,
+                    rgba(255, 255, 255, 0.9), 50%, 
+                    transparent 50%
+                    ), 
+                    url(../img/nat-10.jpg);
+    background-size: cover;
+    /*background-size: 100%; */ /* same as [ background-size: cover ] */
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .2);
+    height: 30rem;}
+
+/*************************************************/
+
+
+
+/******************TEST SIGN-UP ******************/
+  .test-section-register {
+     background-image: linear-gradient(
+    to right bottom, 
+    rgba(53, 66, 74, 0.1), 
+    rgba(20, 23, 26, 0.1)), 
+    url(../img/nat-5.jpg);
+    background-size: cover;
+    padding-top: 55px;}
+
+    .test-form-group-title{
+    text-align: center;
+    margin-top: 40px;}
+/************************************************/

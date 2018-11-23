@@ -14,26 +14,26 @@
         <header>
             <div class="row">
                 <div id="header-flex-box">
-                    <div class="div-ireporter" id="div-site-name-id">
-                         <h1><span class="special-coloring">i</span>Repa</h1>
+                    <div class="logo" id="div-site-name-id">
+                        <h1><a href="index.html"><span class="special-coloring">i</span><span class="repa">Repa</span></a></h1>
                     </div>
                     <nav class="navigation">
                         <ul class="nav-ul">
-                            <li class="li-outer a-li-outer current"><a href="#" class="links">Home</a></li>
+                            <!-- <li class="li-outer animated-link active-link"><a href="#" class="links">Home</a></li> -->
                             <li class="li-outer li-account"><a href="#" class="links">Account</a>
                                 <ul>
-                                    <li class="li-inner a-li-outer"><a href="#" class="links">Login</a></li>
-                                    <li class="li-inner a-li-outer"><a href="#" class="links">Register</a></li>
+                                    <li class="li-inner animated-link"><a href="login.html" class="links">Login</a></li>
+                                    <li class="li-inner animated-link"><a href="signup.html" class="links">Register</a></li>
                                 </ul>
                             </li>
                             <li class="li-outer li-reports"><a href="#" class="links">Reports</a>
                                 <ul>
-                                    <li class="li-inner a-li-outer"><a href="#" class="links">Report a case</a></li>
-                                    <li class="li-inner a-li-outer"><a href="#" class="links">Report history</a></li>
-                                    <li class="li-inner a-li-outer"><a href="#" class="links">All Reports</a></li>
+                                    <li class="li-inner animated-link"><a href="#" class="links">Report a case</a></li>
+                                    <li class="li-inner animated-link"><a href="#" class="links">Report history</a></li>
+                                    <li class="li-inner animated-link"><a href="#" class="links">All Reports</a></li>
                                 </ul>
                             </li>
-                            <li class="li-outer a-li-outer"><a href="#" class="links">User profile</a></li>
+                            <li class="li-outer animated-link"><a href="#" class="links">User profile</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -58,15 +58,22 @@
             </div>
         </section>
 
-        <section class="mini-main-section">
-            <div class="row">
-
-            </div>
-        </section>
+    <section class="section-newsletter">
+        <div class="container" id="newsletter-container">
+            <h1 id="h1-id">Subscribe To Our Newsletter</h1>
+            <form action="#" id="form-id">
+                <div class="input-and-label">
+                    <input type="email" class="input-class" id="email" placeholder="Enter Email..." required>
+                    <label for="email" class="label-class">Enter Email...</label>
+                </div>
+                <button type="submit" id="btn__submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
 
         <section class="section-about">
             <div class="u-center-text u-margin-bottom-medium u-margin-top-big">
-                <h2 class="heading-secondary">
+                <h2 class="heading-secondary-dark">
                     We have one job: developing Africa
                 </h2>
             </div>
@@ -75,17 +82,21 @@
                     <div class="info">
                         <h3 class="heading-tertiary u-margin-bottom-small">Take a step towards ending corruption</h3>
                         <p class="paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat omnis ad cum accusantium quisquam necessitatibus facere eveniet vero! Vero aspernatur sint rerum voluptatem dolorum asperiores et exercitationem corporis cumque illo.
+                            Corruption denies us the basic ammenities, corruption denies persons living with 
+                            disabilities friendly facilities. Report any corrupt practice and let us build a better 
+                            world together!
                         </p>
                     </div>
                     <div class="info u-margin-bottom-medium">
                         <h3 class="heading-tertiary u-margin-bottom-small">We can help, if only you would let us know</h3>
                         <p class="paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat omnis ad cum accusantium quisquam necessitatibus facere eveniet vero! Vero aspernatur sint rerum voluptatem dolorum asperiores et exercitationem corporis cumque illo.
+                           Recent research indicates that by 2020, more than 20,000 families could be affected by sever
+                           flood and communal clashes. Help us prevent this. Start by telling us what needs to be fixed right now in your area.
+                           Help is one click away!
                         </p>
                     </div>
 
-                    <div class="link-container"><a href="#" class="link">Learn more &rarr;</a></div>
+                    <div class="link-container"><a href="#" class="link" id="link-on-white-bg">Learn more &rarr;</a></div>
                 </div>
                 <div class="col-1-of-2">
                     <div class="img-gallery">
@@ -137,7 +148,7 @@
                                 <div class="card-details">
                                     <ul>
                                         <li>Bad road sections</li>
-                                        <li>Collapsed bridges</li>
+                                        <li>Flooding</li>
                                         <li>Communal violence</li>
                                         <li>Disease outbreak</li>
                                         <li>... and many more</li>
@@ -157,6 +168,34 @@
                 </div>
             </div>
         </section>
+
+        <footer class="footer">
+            <div class="footer-logo-box">
+                <div class="logo" id="div-site-name-id">
+                    <h1 class="logo-footer-version"><span class="special-coloring">i</span>Repa</h1>
+                </div>
+            </div>
+
+                <div class="row flex-box-footer">
+                    <div class="col-1-of-2">
+                        <div class="footer-navigation">
+                            <ul class="footer-ul">
+                                <li class="footer-ul-li"><a href="#" class="footer-link">About us</a></li>
+                                <li class="footer-ul-li"><a href="#" class="footer-link">Contact us</a></li>
+                                <li class="footer-ul-li"><a href="#" class="footer-link">Privacy policy</a></li>
+                                <li class="footer-ul-li"><a href="#" class="footer-link">Terms</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-1-of-2">
+                        <p class="footer-copyright">
+                            Built by <a href="#" class="footer-link">Eneja Kingsley</a>. Copyright &copy; by Eneja Kingsley. Lorem ipsum dolor,
+                            sit amet consectetur adipisicing elit. Voluptatibus magnam eveniet vero corporis, repellat modi ducimus deleniti
+                            voluptatum a hic qui excepturi veritatis totam iste quos ullam est sunt omnis.
+                        </p>
+                    </div>
+                </div>
+        </footer>
 
 
         <script src="./js/script.js"></script>
