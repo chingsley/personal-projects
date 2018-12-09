@@ -247,10 +247,30 @@
 <a name='L199'></a><a href='#L199'>199</a>
 <a name='L200'></a><a href='#L200'>200</a>
 <a name='L201'></a><a href='#L201'>201</a>
-<a name='L202'></a><a href='#L202'>202</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -461,40 +481,42 @@ const users = {
         password: 'kingsley',
         confirmPassword: 'kingsley',
         adminSecret: 'nimdamai',
+        username: 'enejakc'
     },
     validUserOne: {
         id: 2,
         firstname: 'john',
         lastname: 'snow',
+        username: 'crow',
         phoneNumber: '08023875011',
         email: 'johnsnow@gmail.com',
-        password: 'john',
-        confirmPassword: 'john',
+        password: 'johnsnow',
+        confirmPassword: 'johnsnow',
         adminSecret: '',
     },
     validUserTwo: {
         id: 3,
         firstname: 'theon',
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         password: 'theon',
         confirmPassword: 'theon',
         adminSecret: '',
     },
-    validUserInvalidPass: {
+    validUserInvalidPassword: {
         email: 'johnsnow@gmail.com',
-        password: 'wrongpassword',
+        password: 'this-is-not-his-password',
     },
-    invalidUser: {
-        firstname: 'four-O-four',
-        // email: 'no@email.address',
-        email: 'aturoVidal@gmail.com',
-        password: 'invalid',
+    unregisteredUser: {
+        email: 'unregistered@gmail.com',
+        password: 'he-is-not-registered',
     },
     invalidUserNoData: {},
     invalidUserNoFirstname: {
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         password: 'theon',
@@ -503,6 +525,7 @@ const users = {
     invalidUserNoEmail: {
         firstname: 'theon',
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         password: 'theon',
         confirmPassword: 'theon',
@@ -511,6 +534,7 @@ const users = {
     invalidUserNoPass: {
         firstname: 'theon',
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         adminSecret: '',
@@ -518,6 +542,7 @@ const users = {
     invalidUserMissmatchedPassword: {
         firstname: 'theon',
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         password: 'theon',
@@ -527,6 +552,7 @@ const users = {
     incorrectFirstname: {
         firstname: 't', // firstname less than 2 characters
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         password: 'theon',
@@ -536,6 +562,7 @@ const users = {
     incorrectLastname: {
         firstname: 'theon', 
         lastname: 'g', // lastname less than 2 characters
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         password: 'theon',
@@ -545,6 +572,7 @@ const users = {
     incorrectEmail: {
         firstname: 'theon', 
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'kc@-gmail.com ', // email: leading dash in front of domain is not allowed
         password: 'theon',
@@ -554,6 +582,7 @@ const users = {
     passwordTooShort: {
         firstname: 'theon', 
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'eneja.kc@gmail.com ',
         password: 'theo',
@@ -564,6 +593,7 @@ const users = {
     invalidPhoneNumber: {
         firstname: 'theon', 
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '08088a22928', // phone number cannot contain characters
         email: 'eneja.kc@gmail.com ',
         password: 'theo',
@@ -655,7 +685,7 @@ export {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Dec 09 2018 08:08:13 GMT+0100 (West Africa Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Dec 09 2018 17:26:24 GMT+0100 (West Africa Standard Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

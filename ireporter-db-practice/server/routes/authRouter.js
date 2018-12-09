@@ -31,8 +31,7 @@ const upload = multer({
   fileFilter,
 });
 
-router.post('/signup', upload.single('picture'), Inspect.signup, AuthController.signup, AuthController.signin);
-// router.post('/signup', upload.single('picture'), Inspect.signup, AuthController.signup, AuthController.signin, AuthHandler.generateAuthToken);
-// router.post('/login', Inspect.signin, AuthController.signin, AuthHandler.generateAuthToken);
+router.post('/signup', upload.single('picture'), Inspect.signup, AuthController.signup, AuthController.signin, AuthHandler.generateAuthToken);
+router.post('/login', upload.none(), Inspect.signin, AuthController.signin, AuthHandler.generateAuthToken);
 
 export default router;

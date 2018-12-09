@@ -35,7 +35,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _dotenv2.default.config();
 const app = (0, _express2.default)();
 
-app.use((0, _morgan2.default)('dev'));
+if (process.env.NODE_ENV !== 'test') {
+  app.use((0, _morgan2.default)('dev'));
+}
 
 // Enable CORS
 app.use((0, _cors2.default)());

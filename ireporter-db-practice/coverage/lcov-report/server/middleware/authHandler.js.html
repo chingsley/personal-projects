@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for server/controllers/authController.js</title>
+    <title>Code coverage report for server/middleware/authHandler.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,35 +16,35 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">All files</a> / <a href="index.html">server/controllers</a> authController.js
+      <a href="../../index.html">All files</a> / <a href="index.html">server/middleware</a> authHandler.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">93.55% </span>
+        <span class="strong">40% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>29/31</span>
+        <span class='fraction'>8/20</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>6/6</span>
+        <span class='fraction'>4/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>5/5</span>
+        <span class='fraction'>2/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">92.86% </span>
+        <span class="strong">40% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>26/28</span>
+        <span class='fraction'>8/20</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -114,58 +114,25 @@
 <a name='L66'></a><a href='#L66'>66</a>
 <a name='L67'></a><a href='#L67'>67</a>
 <a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a>
-<a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a>
-<a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,33 +145,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -214,93 +171,85 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import bcrypt from 'bcrypt';
-import pool from '../db/config';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
 &nbsp;
-class AuthController {
-  static async signup(req, res, next) {
+dotenv.config();
+&nbsp;
+class AuthHandler {
+  static async generateAuthToken(req, res) {
     const {
-      firstname,
-      lastname,
-      othernames,
-      username,
-      phoneNumber,
-      email,
-      password,
-      picture,
-      registered,
-      adminSecret,
+      userDetails, userId, userName, userEmail, userStatus,
     } = req;
-    const isAdmin = adminSecret === process.env.ADMIN_SECRET;
+    const token = jwt.sign({
+      userId,
+      userName,
+      userEmail,
+      userStatus,
+    }, process.env.JWT_SECRET);
 &nbsp;
-    try {
-      // Hash password and save user to database
-      const hashedPassword = await bcrypt.hash(password, 10);
-      const dbQuery = `INSERT INTO users(
-                firstname,
-                lastname,
-                othernames,
-                username,
-                phonenumber,
-                email,
-                password,
-                picture,
-                registered,
-                is_admin
-            ) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`;
-      await pool.query(dbQuery, [
-        firstname,
-        lastname,
-        othernames,
-        username,
-        phoneNumber,
-        email,
-        hashedPassword,
-        picture,
-        registered,
-        isAdmin,
-      ]);
+    const statusCode = req.wantsToSignUp ? 201 : 200;
+    res.status(statusCode).json({
+      status: statusCode,
+      data: [{
+        token,
+        user: {
+          id: userDetails.id,
+          firstname: userDetails.firstname,
+          lastname: userDetails.lastname,
+          othernames: userDetails.othernames || 'not specified',
+          email: userDetails.email,
+          phoneNumber: userDetails.phonenumber,
+          username: userDetails.username,
+          registered: userDetails.registered,
+          isAdmin: userDetails.is_admin,
+          picture: `http://localhost:${process.env.PORT}/${userDetails.picture}`,
+        },
+      }],
+    });
+  }// END generateAuthToken
 &nbsp;
-      req.wantsToSignUp = true;
-      return next();
+<span class="fstat-no" title="function not covered" >  static </span>authorize(req, res, next) {
+    const token = <span class="cstat-no" title="statement not covered" >req.header('x-auth');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    try {</span>
+      const decoded = <span class="cstat-no" title="statement not covered" >jwt.verify(token, process.env.JWT_SECRET);</span>
+<span class="cstat-no" title="statement not covered" >      req.userId = decoded.userId;</span>
+<span class="cstat-no" title="statement not covered" >      req.userName = decoded.userName;</span>
+<span class="cstat-no" title="statement not covered" >      req.userEmail = decoded.userEmail;</span>
+<span class="cstat-no" title="statement not covered" >      req.userStatus = decoded.userStatus;</span>
+<span class="cstat-no" title="statement not covered" >      return next();</span>
     } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(400).json({ error });</span>
-    }
-  }// END signup
-&nbsp;
-&nbsp;
-  static async signin(req, res, next) {
-    const { email, password } = req;
-    const response400 = message =&gt; res.status(400).json({ status: 400, error: message });
-&nbsp;
-    try {
-      const userExists = (await pool.query('SELECT * FROM users WHERE email=$1', [email])).rowCount;
-      if (!userExists) return response400('Invalid email or password');
-      const userDetails = (await pool.query('SELECT * FROM users WHERE email=$1', [email])).rows[0];
-      const correctPassword = await bcrypt.compare(password, userDetails.password);
-      if (!correctPassword) return response400('Invalid email or password');
-&nbsp;
-      // Append important payload to request object
-      req.userDetails = userDetails;
-      req.userId = userDetails.id;
-      req.userName = userDetails.username;
-      req.userEmail = userDetails.email;
-      req.userStatus = userDetails.is_admin ? 'admin' : 'customer';
-&nbsp;
-      return next();
-    } catch (error) {
-<span class="cstat-no" title="statement not covered" >      return res.status(500).json({</span>
-        status: 500,
-        error: 'internal server error',
+<span class="cstat-no" title="statement not covered" >      return res.status(401).json({</span>
+        status: 401,
+        error: 'you must be logged in to use this route',
       });
     }
-  }// END signin
+  }// END authorize
 &nbsp;
-} // END class AuthController
+<span class="fstat-no" title="function not covered" >  static </span>authorizeAdmin(req, res, next) {
+<span class="cstat-no" title="statement not covered" >    if (req.userStatus !== 'admin') {</span>
+<span class="cstat-no" title="statement not covered" >      return res.status(403).json({</span>
+        status: 403,
+        error: 'Auth error. Only admin can access this route',
+      });
+    }
+<span class="cstat-no" title="statement not covered" >    return next();</span>
+  }// end static authorizeAdmin
+}// end class AuthHandler
 &nbsp;
-export default AuthController;
+export default AuthHandler;
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

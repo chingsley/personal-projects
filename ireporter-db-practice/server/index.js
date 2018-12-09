@@ -10,7 +10,9 @@ import authRouter from './routes/authRouter';
 dotenv.config();
 const app = express();
 
-app.use(morgan('dev'));
+if (process.env.NODE_ENV !== 'test') {
+  app.use(morgan('dev'));
+}
 
 // Enable CORS
 app.use(cors());

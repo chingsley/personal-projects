@@ -11,6 +11,57 @@ chai.use(chaiHttp);
 before(dropAndRecreateTables); // RESET: drop all tables, recreate repopulate with default values 'before' the test begins
 
 describe('POST /auth/signup', () => {
+    it('should signup an admin user successfully', (done) => {
+        chai.request(app)
+        .post('/api/v1/auth/signup')
+        .send(users.admin)
+        .end((err, res) => {
+            if (err) done(err);
+
+            res.status.should.eql(201);
+            res.body.should.be.an('object').that.has.keys(['status', 'data']);
+            res.body.status.should.eql(201);
+            res.body.data[0].should.be.an('object').that.has.keys(['token', 'user']);
+            res.body.data[0].user.should.be.an('object').that.has.keys(['id', 'firstname', 'lastname', 'othernames', 'email', 'phoneNumber', 'username', 'registered', 'isAdmin', 'picture']);
+            res.body.data[0].user.id.should.eql(users.admin.id);
+            res.body.data[0].user.isAdmin.should.eql(true);
+            done();
+        });
+    });
+
+    it('should signup a customer user successfully', (done) => {
+        chai.request(app)
+        .post('/api/v1/auth/signup')
+            .send(users.validUserOne)
+        .end((err, res) => {
+            if (err) done(err);
+
+            res.status.should.eql(201);
+            res.body.should.be.an('object').that.has.keys(['status', 'data']);
+            res.body.status.should.eql(201);
+            res.body.data[0].should.be.an('object').that.has.keys(['token', 'user']);
+            res.body.data[0].user.should.be.an('object').that.has.keys(['id', 'firstname', 'lastname', 'othernames', 'email', 'phoneNumber', 'username', 'registered', 'isAdmin', 'picture']);
+            res.body.data[0].user.id.should.eql(users.validUserOne.id);
+            res.body.data[0].user.isAdmin.should.eql(false);
+            done();
+        });
+    });
+
+    it('should not signup a user if email already exists', (done) => {
+        chai.request(app)
+            .post('/api/v1/auth/signup')
+            .send(users.validUserOne)
+            .end((err, res) => {
+                if (err) done(err);
+
+                res.status.should.eql(400);
+                res.body.should.be.an('object').with.all.keys(['status', 'error']);
+                res.body.status.should.eql(400);
+                res.body.error.should.eql(`${users.validUserOne.email.toString().trim()} has been taken. Please choose another email`);
+                done();
+            });
+    });
+
     it('it should respond with a 400 error message for missing fields', (done) => {
         chai.request(app)
         .post('/api/v1/auth/signup')
@@ -21,7 +72,7 @@ describe('POST /auth/signup', () => {
             res.status.should.eql(400);
             res.body.should.be.an('object').that.has.keys(['status', 'error']);
             res.body.status.should.eql(400);
-            res.body.error.should.eql('values are required for the following fields: firstname, lastname, phoneNumber, email, password, confirmPassword');
+            res.body.error.should.eql('values are required for the following fields: firstname, lastname, username, phoneNumber, email, password, confirmPassword');
             done();
         });
     });
@@ -116,3 +167,85 @@ describe('POST /auth/signup', () => {
         });
     });
 });
+
+
+/********************** POST /auth/login *************** */
+describe('POST /auth/login', () => {
+    it('should sign in a valid and registered user', (done) => {
+        chai.request(app)
+        .post('/api/v1/auth/login')
+        .send(users.validUserOne)
+        .end((err, res) => {
+            if (err) done(err);
+
+            res.status.should.eql(200);
+            res.body.should.be.an('object').which.has.keys(['status', 'data']);
+            res.body.data[0].should.be.an('object').which.has.keys(['token', 'user']);
+            res.body.status.should.eql(200);
+            res.body.data[0].user.should.be.an('object').that.has.keys(['id', 'firstname', 'lastname', 'othernames', 'email', 'phoneNumber', 'username', 'registered', 'isAdmin', 'picture']);
+            res.body.data[0].user.id.should.eql(users.validUserOne.id);
+            done();
+        });
+    });
+
+    it('should a 400 error message if required fields are missing', (done) => {
+        chai.request(app)
+        .post('/api/v1/auth/login')
+        .send(users.invalidUserNoData)
+        .end((err, res) => {
+            if (err) done(err);
+
+            res.status.should.eql(400);
+            done();
+        });
+    });
+
+    it('should not sign user in if non-existing email is provided', (done) => {
+        chai.request(app)
+        .post('/api/v1/auth/login')
+        .send(users.unregisteredUser)
+        .end((err, res) => {
+            if (err) done(err);
+
+            res.status.should.eql(400);
+            res.body.should.not.have.keys(['data']);
+            res.body.should.have.all.keys(['status', 'error']);
+            res.body.status.should.eql(400);
+            res.body.error.should.eql('Invalid email or password');
+            done();
+        });
+    });
+
+    it('should not sign user in if password does not match the specified email', (done) => {
+        chai.request(app)
+        .post('/api/v1/auth/login')
+        .send(users.validUserInvalidPassword)
+        .end((err, res) => {
+            if (err) done(err);
+
+            res.status.should.eql(400);
+            res.body.should.not.have.keys(['data']);
+            res.body.should.be.an('object').which.has.keys(['status', 'error']);
+            res.body.status.should.eql(400);
+            res.body.error.should.eql('Invalid email or password');
+            done();
+        });
+    });
+
+    it('should not sign in user if email and/or password is/are not properly formatted', (done) => {
+        chai.request(app)
+        .post('/api/v1/auth/login')
+        .send({ email: 'bad@email', password: '< 6' })
+        .end((err, res) => {
+            if (err) done(err);
+
+            res.status.should.eql(400);
+            res.body.should.not.have.keys(['data']);
+            res.body.should.be.an('object').which.has.all.keys(['status', 'error']);
+            res.body.status.should.eql(400);
+            res.body.error.should.eql('email or password not properly formatted');
+            done();
+        });
+    });
+});
+/******************* END POST /auth/login ****************/

@@ -25,11 +25,11 @@ class Validator {
   }
 
   static isPasswordTooShort(password) {
-    return password.trim().length < 6;
+    return password.toString().trim().length < 6;
   }
 
   static isMatchingPasswords(password, confirmPassword) {
-    return password.trim() === confirmPassword.trim();
+    return password.toString().trim() === confirmPassword.toString().trim();
   }
 
   static isValidName(name) {

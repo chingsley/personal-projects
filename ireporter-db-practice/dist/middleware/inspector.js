@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
 var _validator = require('../validators/validator');
 
 var _validator2 = _interopRequireDefault(_validator);
@@ -11,10 +15,6 @@ var _validator2 = _interopRequireDefault(_validator);
 var _config = require('../db/config');
 
 var _config2 = _interopRequireDefault(_config);
-
-var _moment = require('moment');
-
-var _moment2 = _interopRequireDefault(_moment);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38,22 +38,23 @@ class Inspect {
         adminSecret
       } = req.body;
 
-      const requiredFields = [firstname, lastname, phoneNumber, email, password, confirmPassword];
+      const requiredFields = [firstname, lastname, username, phoneNumber, email, password, confirmPassword];
       const missingFields = requiredFields.map(function (field, index) {
         const keys = {
           0: 'firstname',
           1: 'lastname',
-          2: 'phoneNumber',
-          3: 'email',
-          4: 'password',
-          5: 'confirmPassword'
+          2: 'username',
+          3: 'phoneNumber',
+          4: 'email',
+          5: 'password',
+          6: 'confirmPassword'
         };
         return field === undefined || field === '' ? keys[index] : null;
       }).filter(function (field) {
         return field !== null;
       }).join(', ');
 
-      if (!firstname || !lastname || !phoneNumber || !email || !password || !confirmPassword) {
+      if (!firstname || !lastname || !phoneNumber || !email || !password || !confirmPassword || !username) {
         return response400(`values are required for the following fields: ${missingFields}`);
       }
 
@@ -67,13 +68,9 @@ class Inspect {
       if (_validator2.default.isPasswordTooShort(password)) return response400('Invalid password. Password should have a minimum of 6 characters');
 
       try {
-        const users = yield _config2.default.query('SELECT * FROM users WHERE email=$1', [email]);
-        console.log(users);
         const userExists = (yield _config2.default.query('SELECT * FROM users WHERE email=$1', [email.toString().trim()])).rowCount;
-        console.log('userExists: ', userExists);
         if (userExists) return response400(`${email.toString().trim()} has been taken. Please choose another email`);
       } catch (error) {
-        console.log(error);
         return response400(`${error}`); // keep an eye on this line
       }
       req.firstname = firstname.toString().trim();
@@ -83,13 +80,38 @@ class Inspect {
       req.phoneNumber = phoneNumber.toString().trim();
       req.email = email.toString().trim();
       req.password = password.toString().trim();
-      req.picture = req.file ? req.file.path : null;
+      req.picture = req.file ? req.file.path : 'uploads/default_profile_pic.png';
       req.registered = (0, _moment2.default)(new Date());
       req.adminSecret = adminSecret ? adminSecret.toString().trim() : null;
 
       return next();
     })();
   } // END signup
+
+
+  static signin(req, res, next) {
+    const { email, password } = req.body;
+    console.log(email, password);
+    if (!email || email === '' || !password) {
+      return res.status(400).json({
+        status: 400,
+        error: 'valid email and password are required'
+      });
+    }
+
+    if (_validator2.default.customValidateEmail(email).error || _validator2.default.isPasswordTooShort(password)) {
+      return res.status(400).json({
+        status: 400,
+        error: 'email or password not properly formatted'
+      });
+    }
+
+    req.email = email.toString().trim();
+    req.password = password.toString().trim();
+    return next();
+  } // END signin
+
+
 } // END Inspect
 
 exports.default = Inspect;

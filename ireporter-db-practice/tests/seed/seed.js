@@ -11,40 +11,42 @@ const users = {
         password: 'kingsley',
         confirmPassword: 'kingsley',
         adminSecret: 'nimdamai',
+        username: 'enejakc'
     },
     validUserOne: {
         id: 2,
         firstname: 'john',
         lastname: 'snow',
+        username: 'crow',
         phoneNumber: '08023875011',
         email: 'johnsnow@gmail.com',
-        password: 'john',
-        confirmPassword: 'john',
+        password: 'johnsnow',
+        confirmPassword: 'johnsnow',
         adminSecret: '',
     },
     validUserTwo: {
         id: 3,
         firstname: 'theon',
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         password: 'theon',
         confirmPassword: 'theon',
         adminSecret: '',
     },
-    validUserInvalidPass: {
+    validUserInvalidPassword: {
         email: 'johnsnow@gmail.com',
-        password: 'wrongpassword',
+        password: 'this-is-not-his-password',
     },
-    invalidUser: {
-        firstname: 'four-O-four',
-        // email: 'no@email.address',
-        email: 'aturoVidal@gmail.com',
-        password: 'invalid',
+    unregisteredUser: {
+        email: 'unregistered@gmail.com',
+        password: 'he-is-not-registered',
     },
     invalidUserNoData: {},
     invalidUserNoFirstname: {
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         password: 'theon',
@@ -53,6 +55,7 @@ const users = {
     invalidUserNoEmail: {
         firstname: 'theon',
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         password: 'theon',
         confirmPassword: 'theon',
@@ -61,6 +64,7 @@ const users = {
     invalidUserNoPass: {
         firstname: 'theon',
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         adminSecret: '',
@@ -68,6 +72,7 @@ const users = {
     invalidUserMissmatchedPassword: {
         firstname: 'theon',
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         password: 'theon',
@@ -77,6 +82,7 @@ const users = {
     incorrectFirstname: {
         firstname: 't', // firstname less than 2 characters
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         password: 'theon',
@@ -86,6 +92,7 @@ const users = {
     incorrectLastname: {
         firstname: 'theon', 
         lastname: 'g', // lastname less than 2 characters
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'theongreyjoy@gmail.com',
         password: 'theon',
@@ -95,6 +102,7 @@ const users = {
     incorrectEmail: {
         firstname: 'theon', 
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'kc@-gmail.com ', // email: leading dash in front of domain is not allowed
         password: 'theon',
@@ -104,6 +112,7 @@ const users = {
     passwordTooShort: {
         firstname: 'theon', 
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '0808822928',
         email: 'eneja.kc@gmail.com ',
         password: 'theo',
@@ -114,6 +123,7 @@ const users = {
     invalidPhoneNumber: {
         firstname: 'theon', 
         lastname: 'greyjoy',
+        username: 'ironborne',
         phoneNumber: '08088a22928', // phone number cannot contain characters
         email: 'eneja.kc@gmail.com ',
         password: 'theo',

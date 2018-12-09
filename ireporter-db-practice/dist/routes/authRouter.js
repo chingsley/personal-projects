@@ -51,8 +51,7 @@ const upload = (0, _multer2.default)({
   fileFilter
 });
 
-router.post('/signup', upload.single('picture'), _inspector2.default.signup, _authController2.default.signup, _authController2.default.signin);
-// router.post('/signup', upload.single('picture'), Inspect.signup, AuthController.signup, AuthController.signin, AuthHandler.generateAuthToken);
-// router.post('/login', Inspect.signin, AuthController.signin, AuthHandler.generateAuthToken);
+router.post('/signup', upload.single('picture'), _inspector2.default.signup, _authController2.default.signup, _authController2.default.signin, _authHandler2.default.generateAuthToken);
+router.post('/login', upload.none(), _inspector2.default.signin, _authController2.default.signin, _authHandler2.default.generateAuthToken);
 
 exports.default = router;
